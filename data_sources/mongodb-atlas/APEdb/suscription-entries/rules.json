@@ -1,0 +1,21 @@
+{
+    "collection": "suscription-entries",
+    "database": "APEdb",
+    "roles": [
+        {
+            "name": "owner",
+            "apply_when": {
+                "owner": "user.id"
+            },
+            "document_filters": {
+                "write": true,
+                "read": true
+            },
+            "read": true,
+            "write": true,
+            "insert": true,
+            "delete": true,
+            "search": true
+        }
+    ]
+}

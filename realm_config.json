@@ -1,0 +1,9 @@
+{
+    "app_id": "databasesyncintegration-qvrfv",
+    "config_version": 20210101,
+    "name": "DatabaseSyncIntegration",
+    "location": "US-VA",
+    "provider_region": "aws-us-east-2",
+    "deployment_model": "LOCAL",
+    "environment": "production"
+}
