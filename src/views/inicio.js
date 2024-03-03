@@ -7,6 +7,7 @@ import { Helmet } from 'react-helmet'
 import SectionNumeral from '../components/section-numeral'
 import BlogPostCard2 from '../components/blog-post-card2'
 import './inicio.css'
+import '../../connect.js'
 
 const mongoose = require('mongoose');
 const Inicio = (props) => {
