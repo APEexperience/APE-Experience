@@ -17,7 +17,6 @@ const Inicio = (props) => {
       </Helmet>
       <video
         src="https://media.discordapp.net/attachments/1148628473393459271/1213685046636978237/Imagen_Heroe_APE_Experience.mp4?ex=65f65f48&is=65e3ea48&hm=dea28d39802ca5c12a6bcc09eb35397c301975f5992be64b55a93953b1b1d242&"
-	//src="../../public/Material web/Imagen Heroe APE Experience.mp4"
         loop
         muted
         preload="metadata"
