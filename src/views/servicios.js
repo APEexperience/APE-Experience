@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 
 import './servicios.css'
+import '../script-parallax.js'
 
 const Servicios = (props) => {
   return (
@@ -66,7 +67,7 @@ const Servicios = (props) => {
               className="servicios-nav1"
             >
               <div className="servicios-container1">
-                <h2 className="servicios-text3">OnConf</h2>
+                <h2 className="servicios-text03">OnConf</h2>
                 <div data-thq="thq-close-menu" className="servicios-menu-close">
                   <svg viewBox="0 0 1024 1024" className="servicios-icon04">
                     <path d="M810 274l-238 238 238 238-60 60-238-238-238 238-60-60 238-238-238-238 60-60 238 238 238-238z"></path>
@@ -78,11 +79,11 @@ const Servicios = (props) => {
                 data-role="Nav"
                 className="servicios-nav2"
               >
-                <span className="navLink servicios-text4">About</span>
-                <span className="navLink servicios-text5">Features</span>
-                <span className="navLink servicios-text6">Pricing</span>
-                <span className="navLink servicios-text7">Team</span>
-                <span className="navLink servicios-text8">Blog</span>
+                <span className="navLink servicios-text04">About</span>
+                <span className="navLink servicios-text05">Features</span>
+                <span className="navLink servicios-text06">Pricing</span>
+                <span className="navLink servicios-text07">Team</span>
+                <span className="navLink servicios-text08">Blog</span>
               </nav>
               <div className="servicios-button-container">
                 <button className="servicios-login button">Login</button>
@@ -118,6 +119,38 @@ const Servicios = (props) => {
             />
           </div>
         </header>
+      </div>
+      <div className="parallax-container servicios-hero">
+        <span className="servicios-text09 parallax-image">¿Qué necesitas?</span>
+        <h1 className="servicios-text10 parallax-image">
+          <span className="servicios-text11">Servicios</span>
+          <span className="servicios-text12"> </span>
+          <span className="servicios-text13">Esenciales</span>
+          <span className="servicios-text14">
+            <span
+              dangerouslySetInnerHTML={{
+                __html: ' ',
+              }}
+            />
+          </span>
+          <span className="servicios-text15">de APE Experience</span>
+        </h1>
+        <div className="servicios-container2 parallax-image">
+          <svg
+            viewBox="0 0 950.8571428571428 1024"
+            className="servicios-icon12"
+          >
+            <path d="M658.286 475.429c0-141.143-114.857-256-256-256s-256 114.857-256 256 114.857 256 256 256 256-114.857 256-256zM950.857 950.857c0 40-33.143 73.143-73.143 73.143-19.429 0-38.286-8-51.429-21.714l-196-195.429c-66.857 46.286-146.857 70.857-228 70.857-222.286 0-402.286-180-402.286-402.286s180-402.286 402.286-402.286 402.286 180 402.286 402.286c0 81.143-24.571 161.143-70.857 228l196 196c13.143 13.143 21.143 32 21.143 51.429z"></path>
+          </svg>
+          <input
+            type="text"
+            placeholder="placeholder"
+            className="input servicios-textinput"
+          />
+          <button type="button" className="button servicios-button">
+            Buscar
+          </button>
+        </div>
       </div>
     </div>
   )
