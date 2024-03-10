@@ -16,7 +16,7 @@ const Inicio = (props) => {
         <meta property="og:title" content="APE Experience" />
       </Helmet>
       <video
-        src="https://media.discordapp.net/attachments/1148628473393459271/1213685046636978237/Imagen_Heroe_APE_Experience.mp4?ex=65f65f48&is=65e3ea48&hm=dea28d39802ca5c12a6bcc09eb35397c301975f5992be64b55a93953b1b1d242&"
+        src="https://cdn.discordapp.com/attachments/1162199002016653492/1216269019712065607/Imagen_Heroe_APE_Experience.mp4?ex=65ffc5cb&is=65ed50cb&hm=fd8692f22f44e6392b426a54be8e6acc55f6592310d0214334002fdbf056a578&"
         loop
         muted
         preload="metadata"
