@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 
 import './servicios.css'
+import '../style.css'
 import '../script-parallax.js'
 
 const Servicios = (props) => {
