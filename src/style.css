@@ -210,6 +210,21 @@
 .a\.link:hover {
   color: #5302fd;
 }
+.parallax-container {
+  width: 100%;
+  display: flex;
+  padding: var(--dl-space-space-threeunits);
+  overflow: hidden;
+  min-height: 80vh;
+  align-items: center;
+  perspective: 1px;
+  flex-direction: column;
+  background-size: cover;
+  background-position: center;
+}
+.parallax-image {
+  transform: translateZ(-1px) scale(2);
+}
 .Content {
   font-size: 16px;
   font-family: Source Sans Pro;
@@ -218,6 +233,15 @@
   text-transform: none;
   text-decoration: none;
 }
+@media(max-width: 1440px) {
+  .parallax-container {
+    height: 360px;
+    min-height: 50vh;
+    background-size: cover;
+    background-image: url("/Material web/fondo-ape-servicios-1500h.jpg");
+  }
+}
+
 @media(max-width: 991px) {
   .image-notes {
     flex: 0 0 auto;
@@ -231,10 +255,20 @@
   .brand {
     aspect-ratio: 16/9;
   }
+  .parallax-container {
+    padding-left: var(--dl-space-space-twounits);
+    padding-right: var(--dl-space-space-twounits);
+  }
 }
 @media(max-width: 479px) {
   .accordion {
     padding-top: var(--dl-space-space-oneandhalfunits);
     padding-bottom: var(--dl-space-space-oneandhalfunits);
+  }
+  .parallax-container {
+    padding-top: var(--dl-space-space-twounits);
+    padding-left: var(--dl-space-space-unit);
+    padding-right: var(--dl-space-space-unit);
+    padding-bottom: var(--dl-space-space-twounits);
   }
 }
