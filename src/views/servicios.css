@@ -187,6 +187,7 @@
   margin: auto;
   position: absolute;
   object-fit: cover;
+  background: url(/Material web/fondo-ape-servicios-1500h.jpg);
 }
 .servicios-text09 {
   font-size: 0.75rem;
