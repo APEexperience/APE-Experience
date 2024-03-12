@@ -3,16 +3,14 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "@craco/craco": "^7.0.0-alpha.0",
+    "@craco/craco": "^5.9.0",
+    "@lottiefiles/react-lottie-player": "3.4.7",
+    "dangerous-html": "0.1.13",
+    "prop-types": "15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-router-dom": "^5.2.0",
     "react-helmet": "^6.1.0",
-    "dangerous-html": "0.1.13",
-    "@lottiefiles/react-lottie-player": "3.4.7",
-    "prop-types": "15.7.2"
-    "express": "latest_version_of_express",
-    "node-fetch": "latest_version_of_node_fetch"
+    "react-router-dom": "^5.2.0"
   },
   "scripts": {
     "start": "craco start",
