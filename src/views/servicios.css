@@ -15,7 +15,6 @@
   align-items: flex-start;
   justify-content: center;
   background-color: transparent;
-  z-index: 1000;
 }
 .servicios-navbar {
   width: 100%;
