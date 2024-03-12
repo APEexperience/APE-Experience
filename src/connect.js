@@ -1,18 +1,3 @@
-// Node.js with Express
-const express = require('express');
-const app = express();
-
-app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*');
-  next();
-});
-
-// ...other middleware and route definitions
-
-app.listen(3000, () => {
-  console.log('Server running on port 3000');
-});
-
 // Import Cloudflare API authentication credentials (ensure secure storage)
 const apiKey = '4yCimx4_C7vtxaXp4tC-bFsC18V9M-JN76cojpzs';
 const email = 'apeexperience@gmail.com';
