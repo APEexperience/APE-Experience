@@ -11,6 +11,8 @@
     "dangerous-html": "0.1.13",
     "@lottiefiles/react-lottie-player": "3.4.7",
     "prop-types": "15.7.2"
+    "express": "latest_version_of_express",
+    "node-fetch": "latest_version_of_node_fetch"
   },
   "scripts": {
     "start": "craco start",
