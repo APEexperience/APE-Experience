@@ -15,6 +15,7 @@
   align-items: flex-start;
   justify-content: center;
   background-color: transparent;
+  z-index: 1000;
 }
 .servicios-navbar {
   width: 100%;
@@ -37,7 +38,6 @@
 .servicios-desktop-menu {
   gap: var(--dl-space-space-threeunits);
   display: flex;
-  position: absolute;
 }
 .servicios-nav {
   gap: var(--dl-space-space-oneandhalfunits);
