@@ -52,74 +52,6 @@
     "tsd": "^0.14.0",
     "xo": "^0.39.1"
   },
-    "dependencies": {
-    "data-uri-to-buffer": "^4.0.0",
-    "fetch-blob": "^3.1.4",
-    "formdata-polyfill": "^4.0.10"
-  },
-  "tsd": {
-    "cwd": "@types",
-    "compilerOptions": {
-      "esModuleInterop": true
-    }
-  },
-  "xo": {
-    "envs": [
-      "node",
-      "browser"
-    ],
-    "ignores": [
-      "example.js"
-    ],
-    "rules": {
-      "complexity": 0,
-      "import/extensions": 0,
-      "import/no-useless-path-segments": 0,
-      "import/no-anonymous-default-export": 0,
-      "import/no-named-as-default": 0,
-      "unicorn/import-index": 0,
-      "unicorn/no-array-reduce": 0,
-      "unicorn/prefer-node-protocol": 0,
-      "unicorn/numeric-separators-style": 0,
-      "unicorn/explicit-length-check": 0,
-      "capitalized-comments": 0,
-      "node/no-unsupported-features/es-syntax": 0,
-      "@typescript-eslint/member-ordering": 0
-    },
-    "overrides": [
-      {
-        "files": "test/**/*.js",
-        "envs": [
-          "node",
-          "mocha"
-        ],
-        "rules": {
-          "max-nested-callbacks": 0,
-          "no-unused-expressions": 0,
-          "no-warning-comments": 0,
-          "new-cap": 0,
-          "guard-for-in": 0,
-          "unicorn/no-array-for-each": 0,
-          "unicorn/prevent-abbreviations": 0,
-          "promise/prefer-await-to-then": 0,
-          "ava/no-import-test-files": 0
-        }
-      }
-    ]
-  },
-  "runkitExampleFilename": "example.js",
-  "release": {
-    "branches": [
-      "+([0-9]).x",
-      "main",
-      "next",
-      {
-        "name": "beta",
-        "prerelease": true
-      }
-    ]
-  }
-},
   "publishConfig": {
   "registry": "https://npm.pkg.github.com"
 },
@@ -133,5 +65,4 @@
   "dependencies": {
     "ORGANIZATION_NAME/PACKAGE_NAME": "1.0.0"
   }
-}
 }
