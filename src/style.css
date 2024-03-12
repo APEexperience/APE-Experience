@@ -221,6 +221,7 @@
   flex-direction: column;
   background-size: cover;
   background-position: center;
+  background-image: url("/Material web/fondo-ape-servicios-1500h.jpg");
 }
 .parallax-image {
   transform: translateZ(-1px) scale(2);
