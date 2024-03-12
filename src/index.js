@@ -9,7 +9,7 @@ import {
 
 import './style.css'
 import './connect.js'
-import '/components/Preloader.js'
+import 'components/Preloader.js'
 import Servicios from './views/servicios'
 import Inicio from './views/inicio'
 import SobreMi from './views/sobre-mi'
