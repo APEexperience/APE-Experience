@@ -24,6 +24,11 @@ const Inicio = (props) => {
 const handleSubmit = async (event) => {
   event.preventDefault();
 
+  const data = {
+    nombre: /* obtener el valor del campo de nombre */,
+    correo: /* obtener el valor del campo de correo */,
+  };
+
   try {
     const response = await fetch('https://ape.sqlmyadmin.workers.dev/api/suscripciones', {
       method: 'POST',
