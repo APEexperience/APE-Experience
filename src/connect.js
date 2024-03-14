@@ -1,3 +1,11 @@
+export async function onRequest(context) {
+  // Create a prepared statement with our query
+  const ps = context.env.DB.prepare('SELECT * from Newsletter');
+  const data = await ps.first();
+
+  return Response.json(data);
+}
+
 // Import Cloudflare API authentication credentials (ensure secure storage)
 const apiKey = '4yCimx4_C7vtxaXp4tC-bFsC18V9M-JN76cojpzs';
 const email = 'apeexperience@gmail.com';
