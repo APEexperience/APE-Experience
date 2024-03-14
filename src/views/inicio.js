@@ -25,7 +25,7 @@ const handleSubmit = async (event) => {
   event.preventDefault();
 
   try {
-    const response = await fetch('/api/suscripciones', {
+    const response = await fetch('https://ape.sqlmyadmin.workers.dev/api/suscripciones', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
