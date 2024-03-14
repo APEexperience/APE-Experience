@@ -21,27 +21,31 @@ const Inicio = (props) => {
     setCorreo(event.target.value);
   };
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
+const handleSubmit = async (event) => {
+  event.preventDefault();
 
-    try {
-      const response = await fetch('/api/suscripciones', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ nombre, correo }),
-      });
+  try {
+    const response = await fetch('/api/suscripciones', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ nombre, correo }),
+    });
 
+    if (response.ok) {
       const data = await response.json();
       console.log('Respuesta del servidor:', data);
 
       // Limpiar los campos después del envío exitoso
       setNombre('');
       setCorreo('');
-    } catch (error) {
-      console.error('Error al enviar datos al servidor:', error);
+    } else {
+      console.error('Error al enviar datos al servidor:', response.statusText);
     }
+  } catch (error) {
+    console.error('Error al enviar datos al servidor:', error);
+  }
   };
 
   // Función para generar un ID único para cada envío de información
