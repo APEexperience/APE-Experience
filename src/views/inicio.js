@@ -10,8 +10,8 @@ import './inicio.css'
 import Connect from '../connect.js';
 
 const Inicio = (props) => {
-	const [nombre, setNombre] = useState('');
-	const [correo, setCorreo] = useState('');
+  const [nombre, setNombre] = useState('');
+  const [correo, setCorreo] = useState('');
 
   const handleNombreChange = (event) => {
     setNombre(event.target.value);
@@ -25,14 +25,12 @@ const Inicio = (props) => {
     event.preventDefault();
 
     try {
-      const response = await fetch('https://api.cloudflare.com/client/v4/accounts/{ACCOUNT_ID}/storage/kv/named/D1', {
-        method: 'PUT',
+      const response = await fetch('/api/suscripciones', {
+        method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'x-auth-email': 'apeexperience@gmail.com',
-          'x-auth-key': 'deMXgRkwgjJ03nLSRmUO9DingiegMQuT-luiwsM4',
         },
-        body: JSON.stringify({ id: generateId(), name: nombre, email: correo }),
+        body: JSON.stringify({ nombre, correo }),
       });
 
       const data = await response.json();
@@ -643,7 +641,7 @@ const Inicio = (props) => {
             Suscríbete a mi newsletter para poder recibir promociones y
             descuentos
           </p>
-    <div>
+<div>
       <form onSubmit={handleSubmit}>
         <div className="inicio-content5">
           <div className="inicio-inputs">
@@ -652,7 +650,7 @@ const Inicio = (props) => {
               value={nombre}
               onChange={handleNombreChange}
               required
-              placeholder="Nombre *"
+              placeholder="Nombre"
               autoComplete="name"
               className="inicio-textinput input"
             />
