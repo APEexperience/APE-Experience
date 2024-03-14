@@ -10,23 +10,12 @@ import './inicio.css'
 import Connect from '../connect.js';
 
 const Inicio = (props) => {
-  const [nombre, setNombre] = useState('');
-  const [correo, setCorreo] = useState('');
-
-  const handleNombreChange = (event) => {
-    setNombre(event.target.value);
-  };
-
-  const handleCorreoChange = (event) => {
-    setCorreo(event.target.value);
-  };
-
 const handleSubmit = async (event) => {
   event.preventDefault();
 
   const data = {
-    nombre: /* obtener el valor del campo de nombre */,
-    correo: /* obtener el valor del campo de correo */,
+    nombre: nombre, // utilizar la variable de estado 'nombre'
+    correo: correo, // utilizar la variable de estado 'correo'
   };
 
   try {
@@ -39,8 +28,8 @@ const handleSubmit = async (event) => {
     });
 
     if (response.ok) {
-      const data = await response.json();
-      console.log('Respuesta del servidor:', data);
+      const responseData = await response.json();
+      console.log('Respuesta del servidor:', responseData);
 
       // Limpiar los campos después del envío exitoso
       setNombre('');
@@ -51,7 +40,7 @@ const handleSubmit = async (event) => {
   } catch (error) {
     console.error('Error al enviar datos al servidor:', error);
   }
-  };
+};
 
   // Función para generar un ID único para cada envío de información
   const generateId = () => {
