@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom'
 
 import Script from 'dangerous-html/react'
@@ -10,6 +10,47 @@ import './inicio.css'
 import Connect from '../connect.js';
 
 const Inicio = (props) => {
+	const [nombre, setNombre] = useState('');
+	const [correo, setCorreo] = useState('');
+
+  const handleNombreChange = (event) => {
+    setNombre(event.target.value);
+  };
+
+  const handleCorreoChange = (event) => {
+    setCorreo(event.target.value);
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    try {
+      const response = await fetch('https://api.cloudflare.com/client/v4/accounts/{ACCOUNT_ID}/storage/kv/named/D1', {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+          'x-auth-email': 'apeexperience@gmail.com',
+          'x-auth-key': 'deMXgRkwgjJ03nLSRmUO9DingiegMQuT-luiwsM4',
+        },
+        body: JSON.stringify({ id: generateId(), name: nombre, email: correo }),
+      });
+
+      const data = await response.json();
+      console.log('Respuesta del servidor:', data);
+
+      // Limpiar los campos después del envío exitoso
+      setNombre('');
+      setCorreo('');
+    } catch (error) {
+      console.error('Error al enviar datos al servidor:', error);
+    }
+  };
+
+  // Función para generar un ID único para cada envío de información
+  const generateId = () => {
+    return '_' + Math.random().toString(36).substr(2, 9);
+  };
+	
   return (
     <div className="inicio-container">
       <Helmet>
@@ -602,36 +643,44 @@ const Inicio = (props) => {
             Suscríbete a mi newsletter para poder recibir promociones y
             descuentos
           </p>
-          <div className="inicio-content5">
-            <div className="inicio-inputs">
-              <input
-                type="text"
-                required
-                placeholder="Nombre *"
-                autoComplete="name"
-                className="inicio-textinput input"
-              />
-              <input
-                type="email"
-                required
-                placeholder="Correo *"
-                autoComplete="email"
-                className="inicio-textinput1 input"
-              />
-            </div>
-            <span className="inicio-text53">
-              Al enviar, acepta recibir comunicaciones por correo electrónico de
-              APE Experience, incluidas próximas promociones y boletos con
-              descuento, información y acceso a eventos exclusivos solo por
-              invitación.
-            </span>
-            <button className="inicio-button2 button">
-              <span className="inicio-text54">
-                <span>Suscribirme al newsletter</span>
-                <br></br>
-              </span>
-            </button>
+    <div>
+      <form onSubmit={handleSubmit}>
+        <div className="inicio-content5">
+          <div className="inicio-inputs">
+            <input
+              type="text"
+              value={nombre}
+              onChange={handleNombreChange}
+              required
+              placeholder="Nombre *"
+              autoComplete="name"
+              className="inicio-textinput input"
+            />
+            <input
+              type="email"
+              value={correo}
+              onChange={handleCorreoChange}
+              required
+              placeholder="Correo *"
+              autoComplete="email"
+              className="inicio-textinput1 input"
+            />
           </div>
+          <span className="inicio-text53">
+            Al enviar, acepta recibir comunicaciones por correo electrónico de
+            APE Experience, incluidas próximas promociones y boletos con
+            descuento, información y acceso a eventos exclusivos solo por
+            invitación.
+          </span>
+          <button type="submit" className="inicio-button2 button">
+            <span className="inicio-text54">
+              <span>Suscribirme al newsletter</span>
+              <br></br>
+            </span>
+          </button>
+        </div>
+      </form>
+    </div>
         </div>
       </section>
       <footer className="inicio-footer">
