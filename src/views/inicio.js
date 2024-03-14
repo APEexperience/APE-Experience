@@ -30,7 +30,7 @@ const handleSubmit = async (event) => {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ nombre, correo }),
+      body: JSON.stringify(data),
     });
 
     if (response.ok) {
