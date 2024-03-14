@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom'
 
 import Script from 'dangerous-html/react'
@@ -7,46 +7,8 @@ import { Helmet } from 'react-helmet'
 import SectionNumeral from '../components/section-numeral'
 import BlogPostCard2 from '../components/blog-post-card2'
 import './inicio.css'
-import Connect from '../connect.js';
 
 const Inicio = (props) => {
-const handleSubmit = async (event) => {
-  event.preventDefault();
-
-  const data = {
-    nombre: nombre, // utilizar la variable de estado 'nombre'
-    correo: correo, // utilizar la variable de estado 'correo'
-  };
-
-  try {
-    const response = await fetch('https://ape.sqlmyadmin.workers.dev/api/suscripciones', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data),
-    });
-
-    if (response.ok) {
-      const responseData = await response.json();
-      console.log('Respuesta del servidor:', responseData);
-
-      // Limpiar los campos después del envío exitoso
-      setNombre('');
-      setCorreo('');
-    } else {
-      console.error('Error al enviar datos al servidor:', response.statusText);
-    }
-  } catch (error) {
-    console.error('Error al enviar datos al servidor:', error);
-  }
-};
-
-  // Función para generar un ID único para cada envío de información
-  const generateId = () => {
-    return '_' + Math.random().toString(36).substr(2, 9);
-  };
-	
   return (
     <div className="inicio-container">
       <Helmet>
