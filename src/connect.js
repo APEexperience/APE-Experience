@@ -12,12 +12,6 @@ const email = 'apeexperience@gmail.com';
 const zoneId = 'v1.0-3ef27b33e35db94790646785-0fdbd6bf7b9cedf2ee4c7474a1ce08f74a34dab146fc5ac549303436e9331d29913d8413c7e6333c130bdf2d26873ef8fdaf6c0a57a7496f6f14a07db0377bc242a40e0401a33975f2';
 const d1DatabaseId = '00c3fd9f-2396-4cdb-88ee-f9011af18120';
 
-// Form data
-const formData = {
-  nombre: 'Example',
-  email: 'example@email.com',
-};
-
 // Cloudflare endpoint to send data to D1
 const endpoint = `https://api.cloudflare.com/client/v4/zones/${zoneId}/workers/databases/${d1DatabaseId}/write`;
 
