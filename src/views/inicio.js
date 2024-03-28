@@ -601,44 +601,36 @@ const Inicio = (props) => {
             Suscríbete a mi newsletter para poder recibir promociones y
             descuentos
           </p>
-<div>
-      <form onSubmit={handleSubmit}>
-        <div className="inicio-content5">
-          <div className="inicio-inputs">
-            <input
-              type="text"
-              value={nombre}
-              onChange={handleNombreChange}
-              required
-              placeholder="Nombre"
-              autoComplete="name"
-              className="inicio-textinput input"
-            />
-            <input
-              type="email"
-              value={correo}
-              onChange={handleCorreoChange}
-              required
-              placeholder="Correo *"
-              autoComplete="email"
-              className="inicio-textinput1 input"
-            />
-          </div>
-          <span className="inicio-text53">
-            Al enviar, acepta recibir comunicaciones por correo electrónico de
-            APE Experience, incluidas próximas promociones y boletos con
-            descuento, información y acceso a eventos exclusivos solo por
-            invitación.
-          </span>
-          <button type="submit" className="inicio-button2 button">
-            <span className="inicio-text54">
-              <span>Suscribirme al newsletter</span>
-              <br></br>
+          <div className="inicio-content5">
+            <div className="inicio-inputs">
+              <input
+                type="text"
+                required
+                placeholder="Nombre *"
+                autoComplete="name"
+                className="inicio-textinput input"
+              />
+              <input
+                type="email"
+                required
+                placeholder="Correo *"
+                autoComplete="email"
+                className="inicio-textinput1 input"
+              />
+            </div>
+            <span className="inicio-text53">
+              Al enviar, acepta recibir comunicaciones por correo electrónico de
+              APE Experience, incluidas próximas promociones y boletos con
+              descuento, información y acceso a eventos exclusivos solo por
+              invitación.
             </span>
-          </button>
-        </div>
-      </form>
-    </div>
+            <button className="inicio-button2 button">
+              <span className="inicio-text54">
+                <span>Suscribirme al newsletter</span>
+                <br></br>
+              </span>
+            </button>
+          </div>
         </div>
       </section>
       <footer className="inicio-footer">
